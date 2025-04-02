@@ -4,8 +4,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+}
+
 body {
-  font-family: "VCR", monospace !important;
+  font-family: "Josefin Sans";
 }
 
 pre,
