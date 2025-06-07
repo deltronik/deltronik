@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+console.log("Hi! please give money for my cat's food");
