@@ -1,5 +1,7 @@
 ---
 import Meta from "./../components/meta.astro";
+import Header from "./../components/header.astro";
+const { PrintHero } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,16 +14,40 @@ import Meta from "./../components/meta.astro";
             content="DelTronik es una empresa dedicada a la venta de productos electrónicos de alta calidad."
         />
     </head>
-    <body>
-        <slot />
+    <body class="box">
+        <Header PrintHero={PrintHero} />
     </body>
 </html>
 
 <style>
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
+    /** RessetCSS **/
+    html {
+        color-scheme: light dark;
+        body {
+            background-color: light-dark(#f9fbfc, #121c22);
+            min-height: 100dvh;
+            margin: 0;
+            padding: 0;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p {
+                color: light-dark(black, white);
+            }
+            ol,
+            ul,
+            li {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            a {
+                color: light-dark(black, white);
+                text-decoration: none;
+            }
+        }
     }
 </style>
