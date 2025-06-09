@@ -1,0 +1,46 @@
+<div class="list-cards">
+    <div class="cards">
+        <picture>
+            <img src="/img/logo.svg" alt="este es un banner" />
+        </picture>
+        <h3>Este es un titulo</h3>
+    </div>
+    <div class="cards">
+        <picture>
+            <img src="/img/logo.svg" alt="este es un banner" />
+        </picture>
+        <h3>Este es un titulo</h3>
+    </div>
+    <div class="cards">
+        <picture>
+            <img src="/img/logo.svg" alt="este es un banner" />
+        </picture>
+        <h3>Este es un titulo</h3>
+    </div>
+</div>
+<style>
+    /** MovilStyle**/
+    @media (max-width: 620px) {
+    }
+    /**DesktopStyle**/
+    @media (min-width: 621px) {
+        .list-cards {
+            margin-block-start: 1rem;
+            display: flex;
+            flex-direction: row;
+            .cards {
+                display: flex;
+                flex-direction: column;
+                height: 10rem;
+                width: 10rem;
+                picture {
+                    img {
+                        height: 9rem;
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+    /**/
+</style>

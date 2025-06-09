@@ -1,7 +1,9 @@
 ---
 import Base from "../layouts/Layout.astro";
-
+import Art from "../components/index/article.astro";
 const PrintHero = true;
 ---
 
-<Base PrintHero={PrintHero} />
+<Base PrintHero={PrintHero}>
+    <Art />
+</Base>

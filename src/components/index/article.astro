@@ -1,0 +1,26 @@
+---
+import Cards from "./cardsBlog.astro";
+---
+
+<section class="blogposts">
+    <div>
+        <h2>Articulos</h2>
+        <a href="#">Ver todos 🗃️</a>
+    </div>
+    <Cards />
+</section>
+
+<style>
+    section {
+        height: 14rem;
+        width: 80%;
+        div {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            h2 {
+                margin: 0;
+            }
+        }
+    }
+</style>

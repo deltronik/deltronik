@@ -1,7 +1,7 @@
 ---
 import MovilNav from "./header/headerMovil.astro";
 import DesktopNav from "./header/headerDesktop.astro";
-import Hero from "./hero.astro";
+import Hero from "./index/hero.astro";
 
 const { PrintHero } = Astro.props;
 ---
@@ -9,7 +9,7 @@ const { PrintHero } = Astro.props;
 <header>
     <MovilNav />
     <DesktopNav />
-    {PrintHero && <Hero />}
+    {PrintHero ? <Hero /> : <h1>Hola</h1>}
 </header>
 <style>
     header {
