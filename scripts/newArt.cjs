@@ -28,6 +28,7 @@ date: "${date}"
 draft: true
 tags: ["", ""]
 categories: [""]
+author:""
 ---
 
 # ${title}
