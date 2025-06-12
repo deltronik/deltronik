@@ -1,0 +1,27 @@
+---
+import { getEntryBySlug } from "astro:content";
+import Base from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("blog", slug);
+
+if (!post) {
+    throw new Error(`No se encontró el post con el slug: ${slug}`);
+}
+---
+
+<Base>
+    <article class="prose mx-auto">
+        <h1>{post.data.title}</h1>
+        <p><em>{post.data.date.toLocaleDateString()}</em></p>
+        {
+            post.data.image && (
+                <img
+                    src={`/src/content/blog/${post.slug}/${post.data.image}`}
+                    alt={post.data.imageAlt || post.data.title}
+                />
+            )
+        }
+        <div innerHTML={post.body}></div>
+    </article>
+</Base>
