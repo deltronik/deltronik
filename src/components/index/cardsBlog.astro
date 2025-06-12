@@ -1,9 +1,13 @@
+---
+const { srcImg, altImg, title, src } = Astro.props;
+---
+
 <div class="list-cards">
     <div class="cards">
         <picture>
-            <img src="/img/logo.svg" alt="este es un banner" />
+            <img src={srcImg} alt={altImg} />
         </picture>
-        <h3>Este es un titulo</h3>
+        <a href={src}><h3>{title}</h3></a>
     </div>
     <div class="cards">
         <picture>

@@ -2,8 +2,27 @@
 import Base from "../layouts/Layout.astro";
 import Art from "../components/index/article.astro";
 const PrintHero = true;
+
+//CardsBlog
+import { getCollection } from "astro:content";
+const blogPost = await getCollection("blog");
+const devMode = import.meta.env.DEV;
+
+const publicPost = blogPost
+    .filter((post) => devMode || post.data.draft !== true)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 4);
 ---
 
 <Base PrintHero={PrintHero}>
-    <Art />
+    {
+        publicPost.map((post) => (
+            <Art
+                src={`/blog/${post.slug}`}
+                title={post.data.title}
+                srcImg={`/src/content/blog/${post.slug}/${post.data.image}`}
+                altImg={post.data.imageAlt}
+            />
+        ))
+    }
 </Base>

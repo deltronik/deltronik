@@ -24,6 +24,8 @@ const filePath = path.join(folderPath, "index.md");
 const content = `---
 title: "${title}"
 description: "Descripción del post"
+image: url("./cards.png")
+imageAlt: "Descripción alternativa de la imagen"
 date: "${date}"
 draft: true
 tags: ["", ""]

@@ -1,9 +1,13 @@
 ---
-title: "Hello Word"
+title: "Hello World"
 description: "Descripción del post"
-date: "2025-06-09"
+image: "./cards.png"
+imageAlt: "Descripción alternativa de la imagen"
+date: 2025-01-01
 draft: true
-tags: ["tag","intro","example"]
+tags: ["example", "init"]
+categories: ["hello-World"]
+author: "dan"
 ---
 
 # ¡Hola mundo! 👋

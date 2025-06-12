@@ -1,5 +1,6 @@
 ---
 import Cards from "./cardsBlog.astro";
+const { title, srcImg, altImg, src } = Astro.props;
 ---
 
 <section class="blogposts">
@@ -7,7 +8,7 @@ import Cards from "./cardsBlog.astro";
         <h2>Articulos</h2>
         <a href="#">Ver todos 🗃️</a>
     </div>
-    <Cards />
+    <Cards title={title} srcImg={srcImg} altImg={altImg} src={src} />
 </section>
 
 <style>
