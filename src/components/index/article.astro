@@ -1,27 +1,54 @@
 ---
 import Cards from "./cardsBlog.astro";
-const { title, srcImg, altImg, src } = Astro.props;
+
+//CardsBlog
+import { getCollection } from "astro:content";
+const blogPost = await getCollection("blog");
+const devMode = import.meta.env.DEV;
+
+const publicPost = blogPost
+    .filter((post) => devMode || post.data.draft !== true)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 4);
 ---
 
 <section class="blogposts">
-    <div>
+    <div class="title-article">
         <h2>Articulos</h2>
-        <a href="#">Ver todos 🗃️</a>
+        <a href="./blog">Ver todos 🗃️</a>
     </div>
-    <Cards title={title} srcImg={srcImg} altImg={altImg} src={src} />
+    <article class="listcard">
+        {
+            publicPost.map((post) => (
+                <Cards
+                    title={post.data.title}
+                    srcImg={`src/content/blog/${post.slug}/${post.data.image}`}
+                    altImg={post.data.imageAlt}
+                    src={`/blog/${post.slug}`}
+                />
+            ))
+        }
+    </article>
 </section>
 
 <style>
-    section {
-        height: 14rem;
+    .blogposts {
+        height: 15rem;
         width: 80%;
-        div {
+        .title-article {
             display: flex;
-            align-items: end;
+            flex-direction: row;
             justify-content: space-between;
             h2 {
                 margin: 0;
             }
+        }
+        .listcard {
+            margin-block: 1rem;
+            display: flex;
+            justify-content: space-between;
+            height: 14rem;
+            width: 100%;
         }
     }
 </style>

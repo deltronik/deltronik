@@ -12,7 +12,7 @@ author: "dan"
 
 # ¡Hola mundo! 👋
 
-[imgagen de ejemplo](./cards.png)
+![imgagen de ejemplo](cards.png)
 
 Este es un post de ejemplo creado para ayudarte a diseñar y prototipar tu blog con Hugo.
 
