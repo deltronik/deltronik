@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const notes = await getCollection("note");
+    const folders = [...new Set(notes.map((n) => n.data.folder))];
+
+    return folders.map((folder) => ({
+        params: { folder },
+        props: { folder },
+    }));
+}
+
+const { folder } = Astro.props;
+const allNotes = await getCollection("note");
+const notesInFolder = allNotes.filter((n) => n.data.folder === folder);
+---
+
+<h1>Notas en {folder}</h1>
+<ul>
+    {
+        notesInFolder.map((note) => (
+            <li>
+                <a href={`/notes/${note.slug}`}>{note.data.title}</a>
+            </li>
+        ))
+    }
+</ul>

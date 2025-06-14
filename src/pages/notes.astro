@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+
+const allNotes = await getCollection("note");
+
+const grouped = new Map<string, number>();
+
+for (const note of allNotes) {
+    const cat = note.data.folder;
+    grouped.set(cat, (grouped.get(cat) || 0) + 1);
+}
+---
+
+<h1>Categorías de Notas</h1>
+<ul>
+    {
+        Array.from(grouped.entries()).map(([folder, count]) => (
+            <li>
+                <a href={`/note/${folder}`}>
+                    {folder} ({count} notas)
+                </a>
+            </li>
+        ))
+    }
+</ul>

@@ -1,0 +1,22 @@
+---
+import { getEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    const notes = await getCollection("note");
+    return notes.map((note) => ({
+        params: { slug: note.slug.split("/") },
+        props: { slug: note.slug },
+    }));
+}
+const { slug } = Astro.props;
+const note = await getEntry("note", slug);
+if (!note) throw new Error(`Nota no encontrada: ${slug}`);
+const { Content } = await render(note);
+---
+
+<article>
+    <h1>{note.data.title}</h1>
+    <p>{note.data.date.toDateString()}</p>
+    <Content />
+</article>
