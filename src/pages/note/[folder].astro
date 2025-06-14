@@ -21,7 +21,7 @@ const notesInFolder = allNotes.filter((n) => n.data.folder === folder);
     {
         notesInFolder.map((note) => (
             <li>
-                <a href={`/notes/${note.slug}`}>{note.data.title}</a>
+                <a href={note.slug}>{note.data.title}</a>
             </li>
         ))
     }

@@ -12,7 +12,7 @@ const postNote = AllNotes.filter(note => devMode || !note.data.draft)
 <section class="note">
     <div class="headnote">
         <h2>Apuntes</h2>
-        <a href="./notes">Ver todos</a>
+        <a href="./note">Ver todos</a>
     </div>
     {postNote.map(note => (<a href={`/note/${note.slug}`}>
         <article>
