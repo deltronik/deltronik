@@ -1,0 +1,70 @@
+---
+import fooImg from "../assets/img/footer.png";
+import Creative from "./footer/creative.astro";
+import SocialMedia from "./footer/socialIcons.astro";
+---
+
+<footer>
+    <div class="box-foo">
+        <picture class="box-img">
+            <img
+                class="foo-img"
+                src={fooImg.src}
+                alt="Gato cotemplando el paisaje desde ventana"
+            />
+        </picture>
+        <section class="box-data">
+            <div class="data">
+                <Creative />
+                <SocialMedia />
+                {/* 👆️ Por alguna razon da un eror silencioso */}
+            </div>
+        </section>
+    </div>
+    <div>
+        <p>&copy; 2025 DelTronik |</p>
+    </div>
+    <style>
+        footer {
+            background-color: #12292b;
+            padding-block-start: 2rem;
+            text-align: center;
+            width: 100%;
+            .box-foo {
+                display: flex;
+                justify-content:;
+                margin: auto;
+                position: relative;
+                width: 80%;
+                padding: 0;
+                picture {
+                    width: 50%;
+                    aspect-ratio: 1/1;
+                    padding: 0;
+                    img {
+                        height: 100%;
+                        width: 90%;
+                        padding: 0;
+                    }
+                }
+                .box-data {
+                    width: 50%;
+                    .data {
+                        margin: auto;
+                        width: 90%;
+                    }
+                }
+            }
+            .box-foo::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                width: 1px;
+                background-color: white;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</footer>

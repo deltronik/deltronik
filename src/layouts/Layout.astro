@@ -1,6 +1,7 @@
 ---
 import Meta from "./../components/meta.astro";
 import Header from "./../components/header.astro";
+import Footer from "./../components/footer.astro";
 const { PrintHero } = Astro.props;
 ---
 
@@ -17,6 +18,7 @@ const { PrintHero } = Astro.props;
     <body class="box">
         <Header PrintHero={PrintHero} />
         <slot />
+        <Footer />
     </body>
 </html>
 
