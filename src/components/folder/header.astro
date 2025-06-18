@@ -1,7 +1,7 @@
 ---
 import MovilNav from "./../header/headerMovil.astro";
 import DesktopNav from "./../header/headerDesktop.astro";
-const { Title } = Astro.props;
+const { Title, Img } = Astro.props;
 ---
 
 <header>
@@ -10,10 +10,7 @@ const { Title } = Astro.props;
     <section class="hero-folder">
         <div class="box-data">
             <picture>
-                <img
-                    src={`./src/content/${Title}/img.png`}
-                    alt={`Portada carpeta de ${Title}`}
-                />
+                <img src={Img} alt={`Portada carpeta de ${Title}`} />
             </picture>
         </div>
     </section>

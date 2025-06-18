@@ -3,7 +3,7 @@ import "./../css/main.css";
 import Meta from "./../components/meta.astro";
 import Header from "./../components/folder/header.astro";
 import Footer from "./../components/footer.astro";
-const { Title } = Astro.props;
+const { Title, Img } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ const { Title } = Astro.props;
         />
     </head>
     <body class="box">
-        <Header Title={Title} />
+        <Header Title={Title} Img={Img} />
         <slot />
         <Footer />
     </body>
