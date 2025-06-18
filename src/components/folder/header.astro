@@ -1,0 +1,27 @@
+---
+import MovilNav from "./../header/headerMovil.astro";
+import DesktopNav from "./../header/headerDesktop.astro";
+const { Title } = Astro.props;
+---
+
+<header>
+    <MovilNav />
+    <DesktopNav />
+    <section class="hero-folder">
+        <div class="box-data">
+            <picture>
+                <img
+                    src={`./src/content/${Title}/img.png`}
+                    alt={`Portada carpeta de ${Title}`}
+                />
+            </picture>
+        </div>
+    </section>
+    <h1>Notas en {Title}</h1>
+</header>
+<style>
+    header {
+        height: 80dvh;
+        width: 100%;
+    }
+</style>

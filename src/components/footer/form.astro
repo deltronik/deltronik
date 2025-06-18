@@ -1,0 +1,82 @@
+---
+
+---
+
+<form
+    name="contacto"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+>
+    <label for="correo">Correo electrónico:</label>
+    <input
+        class="correo"
+        type="email"
+        id="correo"
+        name="correo"
+        required
+        autocomplete="email"
+        placeholder="tucorreo@ejemplo.com"
+    />
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea
+        class="text"
+        id="mensaje"
+        name="mensaje"
+        required
+        rows="5"
+        placeholder="Escribí tu mensaje..."></textarea>
+
+    <p class="hidden">
+        <label
+            >Si sos un robot, llená este campo: <input
+                name="bot-field"
+            /></label
+        >
+    </p>
+
+    <button class="btn" type="submit">Enviar</button>
+</form>
+<style>
+    .hidden {
+        display: none;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: start;
+        width: 90%;
+
+        .correo {
+            border-color: #121c22;
+            background-color: #121c22;
+            margin-bottom: 1.5rem;
+            height: 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .text {
+            background-color: #121c22;
+            border-radius: 5px;
+            border-color: #121c22;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            max-height: 15rem;
+            min-height: 3rem;
+            resize: vertical;
+            width: 100%;
+        }
+        .btn {
+            border: none;
+            border-radius: 5px;
+            background-color: #e36838;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    }
+</style>

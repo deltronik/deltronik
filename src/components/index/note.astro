@@ -5,19 +5,19 @@ const devMode = import.meta.env.DEV;
 const AllNotes = await getCollection('note');
 const postNote = AllNotes.filter(note => devMode || !note.data.draft)
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-    .slice(0, 3);
+    .slice(0, 6);
 
 ---
 
 <section class="note">
     <div class="headnote">
         <h2>Apuntes</h2>
-        <a href="./note">Ver todos</a>
+        <a class="all-note-link" href="./note">Ver todos 📚️</a>
     </div>
     {postNote.map(note => (<a href={`/note/${note.slug}`}>
         <article>
             <picture>
-                <img src={note.data.image} alt="Nota" />
+                <img alt="Notion icons" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg" />
             </picture>
             <div class="title-note">
                 <h3>{note.data.title}</h3>
@@ -35,6 +35,10 @@ const postNote = AllNotes.filter(note => devMode || !note.data.draft)
         justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
+        font-family: "Josefin Sans";
+        .all-note-link{
+            color:darkorange;
+        }
     }
     .note {
         display: inline;
@@ -51,7 +55,6 @@ const postNote = AllNotes.filter(note => devMode || !note.data.draft)
                 height: 100%;
                 margin-inline-end: 1rem;
                 border-radius:5px;
-                background-color:#ffff22ff;
                 img {
                     width: 100%;
                     height: 100%;
@@ -62,10 +65,14 @@ const postNote = AllNotes.filter(note => devMode || !note.data.draft)
                 h3 {
                     margin: 0;
                     padding: 0;
+                    font-family: "Josefin Sans";
+                    font-size: 1.2rem;
+                    font-weight: 900;
                 }
                 h6 {
                     margin: 0;
                     padding: 0;
+                    font-family: "Lora";
                 }
             }
             .arrow-note{

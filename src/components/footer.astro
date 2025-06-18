@@ -2,6 +2,8 @@
 import fooImg from "../assets/img/footer.png";
 import Creative from "./footer/creative.astro";
 import SocialMedia from "./footer/socialIcons.astro";
+import Form from "./footer/form.astro";
+import ListLink from "./footer/listLink.astro";
 ---
 
 <footer>
@@ -17,12 +19,13 @@ import SocialMedia from "./footer/socialIcons.astro";
             <div class="data">
                 <Creative />
                 <SocialMedia />
-                {/* 👆️ Por alguna razon da un eror silencioso */}
+                <Form />
+                <ListLink />
             </div>
         </section>
     </div>
     <div>
-        <p>&copy; 2025 DelTronik |</p>
+        <p>&copy; 2025 DelTronik</p>
     </div>
     <style>
         footer {

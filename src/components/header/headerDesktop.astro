@@ -1,10 +1,10 @@
 ---
-
+import Title from "./../titlePage.astro";
 ---
 
 <section class="header-desktop">
     <div class="site-name">
-        <h2>DelTronik</h2>
+        <Title />
     </div>
     <div class="box-nav">
         <nav>
@@ -15,7 +15,7 @@
             </ul>
         </nav>
         <picture>
-            <img src="./img/logo.svg" alt="DelTronik Logo" />
+            <img src="/img/logo.svg" alt="DelTronik Logo" />
         </picture>
     </div>
 </section>
@@ -35,11 +35,11 @@
             align-items: center;
             .site-name {
                 margin-inline-start: 1rem;
-                font: 1.2rem;
             }
             .box-nav {
                 margin-inline-end: 1rem;
                 display: flex;
+                font-family: "Josefin Sans";
                 justify-content: space-between;
                 nav {
                     align-items: center;
@@ -54,7 +54,7 @@
                             align-items: center;
                             a {
                                 color: light-dark(black, #ffffff);
-                                font-size: 1.1rem;
+                                font-size: 1.2rem;
                                 padding-inline: 0.3rem;
                             }
                         }

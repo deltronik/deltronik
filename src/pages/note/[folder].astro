@@ -1,4 +1,6 @@
 ---
+import Base from "./../../layouts/Folder.astro";
+
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -16,13 +18,16 @@ const allNotes = await getCollection("note");
 const notesInFolder = allNotes.filter((n) => n.data.folder === folder);
 ---
 
-<h1>Notas en {folder}</h1>
-<ul>
-    {
-        notesInFolder.map((note) => (
-            <li>
-                <a href={note.slug}>{note.data.title}</a>
-            </li>
-        ))
-    }
-</ul>
+<Base Title={folder}>
+    <h1>Notas en {folder}</h1>
+    <h2>Notas en {folder}</h2>
+    <ul>
+        {
+            notesInFolder.map((note) => (
+                <li>
+                    <a href={note.slug}>{note.data.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</Base>

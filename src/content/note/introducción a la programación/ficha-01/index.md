@@ -1,12 +1,12 @@
 ---
-title: "Brief Project: Creación del sitio web DelTronik"
+title: "Hardware"
 description: "El hardware es el conjunto de componentes físicos y tangibles que forman parte de un sistema informático."
 image: "./cards.png"
 imageAlt: "Descripción alternativa de la imagen"
 date: 2025-06-12
 draft: false
 tags: ["introducción", "hardware"]
-folder: "pre-requisitos"
+folder: "introducción a la programación"
 author: "danh"
 ---
 
