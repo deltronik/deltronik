@@ -19,15 +19,97 @@ const notesInFolder = allNotes.filter((n) => n.data.folder === folder);
 ---
 
 <Base Title={folder}>
-    <h1>Notas en {folder}</h1>
-    <h2>Notas en {folder}</h2>
-    <ul>
-        {
-            notesInFolder.map((note) => (
-                <li>
-                    <a href={note.slug}>{note.data.title}</a>
-                </li>
-            ))
-        }
-    </ul>
+    <section class="notes-folder">
+        <h2>Todas las notas</h2>
+        <div class="list-notes">
+            <nav>
+                <ul>
+                    {
+                        notesInFolder.map((note) => (
+                            <li>
+                                <a href={note.slug}>
+                                    <i class="fa-solid fa-file" />
+                                    {note.data.title}
+                                </a>
+                                <a href={note.slug}>→</a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </nav>
+            <ol></ol>
+        </div>
+    </section>
 </Base>
+<style>
+    .notes-folder {
+      width: 100%;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding-inline: 1rem;
+
+      h2 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align:start;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        background-color: #12292B;
+        border-radius: 0.75rem;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      nav ul li:hover {
+        background-color: #D9672D;
+        transform: translateY(-2px);
+      }
+
+      nav ul li a {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #f5f5f5;
+      }
+
+      nav ul li a:first-of-type {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex: 1;
+      }
+
+      nav ul li a:last-of-type {
+        font-weight: bold;
+        font-size: 1.2rem;
+        opacity: 0.6;
+        transition: opacity 0.2s ease;
+      }
+
+      nav ul li a:last-of-type:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 600px) {
+        nav ul li {
+          flex-direction: ro
+
+
+
+    }
+</style>
