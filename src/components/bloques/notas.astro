@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+const devMode = import.meta.env.DEV;
+
+const todasLasNotas = await getCollection("notas");
+const notaPublicada = todasLasNotas
+    .filter((nota) => devMode || !nota.data.draft)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 6);
+---
+
+<section class="note">
+    <div class="headnote">
+        <h2>Apuntes</h2>
+        <a class="all-note-link" href="./notas">Ver todos 📚️</a>
+    </div>
+    {
+        notaPublicada.map((notas) => (
+            <a href={`/notas/${notas.slug}`}>
+                <article>
+                    <picture>
+                        <img
+                            alt="Notion icons"
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg"
+                        />
+                    </picture>
+                    <div class="title-note">
+                        <h3>{notas.data.title}</h3>
+                        <h6>{notas.data.folder}</h6>
+                    </div>
+                    <div class="arrow-note">
+                        <span>→</span>
+                    </div>
+                </article>
+            </a>
+        ))
+    }
+</section>

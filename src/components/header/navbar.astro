@@ -1,0 +1,23 @@
+---
+import Title from "./../bloques/titlePage.astro";
+---
+
+<section class="header-bar">
+    <div class="site-name">
+        <Title />
+    </div>
+    <div class="box-nav">
+        <input type="checkbox" id="navbar" hidden />
+        <label for="navbar" class="hamburger">☰</label>
+        <nav class="list-link">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/notas">Notas</a></li>
+            </ul>
+        </nav>
+        <picture>
+            <img src="/img/logo.svg" alt="DelTronik Logo" />
+        </picture>
+    </div>
+</section>

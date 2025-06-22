@@ -1,0 +1,49 @@
+---
+import Base from "./../layouts/site-base.astro";
+import Folder from "./../components/folder/folderItem.astro";
+import { getCollection } from "astro:content";
+
+const allNotes = await getCollection("note");
+
+const grouped = new Map<string, number>();
+for (const note of allNotes) {
+    const cat = note.data.folder;
+    grouped.set(cat, (grouped.get(cat) || 0) + 1);
+}
+const printHero = true;
+---
+
+<Base PrintHero={printHero}>
+    <section class="all-notes">
+        <h1>Carpetas de apuntes</h1>
+        <div class="folder-list">
+            {
+                Array.from(grouped.entries()).map(([folder, count]) => (
+                    <a href={`/note/${folder}`}>
+                        <Folder
+                            imagePath={`/src/content/note/${folder}/img.png`}
+                            title={folder}
+                            noteNumber={count}
+                        />
+                    </a>
+                ))
+            }
+        </div>
+    </section>
+</Base>
+<style>
+    .all-notes {
+        h1 {
+            font-size: 2rem;
+            font-family: "Josefin Sans";
+            margin-block-end: 4rem;
+        }
+        width: 80%;
+        margin-block-end: 2rem;
+        .folder-list {
+            display: flex;
+            width: 100%;
+            min-height: 15rem;
+        }
+    }
+</style>

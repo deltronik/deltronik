@@ -1,7 +1,9 @@
 ---
 import MovilNav from "./../header/headerMovil.astro";
 import DesktopNav from "./../header/headerDesktop.astro";
-const { Title, Img } = Astro.props;
+import Banner from "./imgHero.astro";
+import Desc from "./dataHero.astro";
+const { Title } = Astro.props;
 ---
 
 <header>
@@ -9,16 +11,50 @@ const { Title, Img } = Astro.props;
     <DesktopNav />
     <section class="hero-folder">
         <div class="box-data">
-            <picture>
-                <img src={Img} alt={`Portada carpeta de ${Title}`} />
-            </picture>
+            <Banner
+                imagePath={`/src/content/note/${Title}/img.png`}
+                imageAlt={`Portada de ${Title}`}
+            />
+            <div class="text-hero">
+                <h1>{Title}</h1>
+                <Desc folder={Title} />
+            </div>
         </div>
     </section>
-    <h1>Notas en {Title}</h1>
 </header>
 <style>
     header {
-        height: 80dvh;
-        width: 100%;
+        height: 90dvh;
+        display: flex;
+        flex-direction: column;
+        margin-block-end: 2rem;
+        .hero-folder {
+            margin-inline: auto;
+            margin-block: auto;
+            width: 80%;
+            .box-data {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: 45%;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 15px;
+                }
+                .text-hero {
+                    width: 54%;
+                    margin-inline-start: auto;
+                    h1 {
+                        font-family: "Josefin Sans";
+                        font-size: 4rem;
+                        margin-block-end: 1.2rem;
+                    }
+                    p {
+                        font-family: "Josefin Sans";
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
     }
 </style>

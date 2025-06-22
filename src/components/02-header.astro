@@ -1,0 +1,11 @@
+---
+import NavBar from "./header/navbar.astro";
+import Hero from "./header/hero.astro";
+
+const { isIndex } = Astro.props;
+---
+
+<header>
+    <NavBar />
+    {isIndex ? <Hero /> : <h1>Hola</h1>}
+</header>
