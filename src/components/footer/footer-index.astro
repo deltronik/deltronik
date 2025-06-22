@@ -1,0 +1,30 @@
+---
+import fooImg from "../../assets/img/footer.png";
+import Creative from "./creative.astro";
+import SocialMedia from "./socialIcons.astro";
+import Form from "./form.astro";
+import ListLink from "./listLink.astro";
+---
+
+<footer>
+    <div class="box-foo">
+        <picture class="box-img">
+            <img
+                class="foo-img"
+                src={fooImg.src}
+                alt="Gato cotemplando el paisaje desde ventana"
+            />
+        </picture>
+        <section class="box-data">
+            <div class="data">
+                <Creative />
+                <SocialMedia />
+                <Form />
+                <ListLink />
+            </div>
+        </section>
+    </div>
+    <div>
+        <p>&copy; 2025 DelTronik</p>
+    </div>
+</footer>

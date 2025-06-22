@@ -1,11 +1,11 @@
 ---
-import Base from "../layouts/Layout.astro";
-// import Art from "../components/index/article.astro";
-import Note from "../components/index/note.astro";
-const PrintHero = true;
+import Base from "../layouts/site-base.astro";
+// import SectionArtilce from "../components/bloques/articulos.astro";
+//import SectionNote from "../components/bloques/notas.astro";
+const isIndex = true;
 ---
 
-<Base PrintHero={PrintHero}>
+<Base isIndex={isIndex}>
     <!--<Art /> Desarrolar bien el resto primero-->
-    <Note />
+    <!--<SectionNote /> -->
 </Base>

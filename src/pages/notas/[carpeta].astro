@@ -4,28 +4,28 @@ import Base from "./../../layouts/Folder.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-    const notes = await getCollection("note");
-    const folders = [...new Set(notes.map((n) => n.data.folder))];
+    const notas = await getCollection("notas");
+    const carpetas = [...new Set(notas.map((n) => n.data.carpeta))];
 
-    return folders.map((folder) => ({
-        params: { folder },
-        props: { folder },
+    return carpetas.map((carpeta) => ({
+        params: { carpeta },
+        props: { carpeta },
     }));
 }
 
-const { folder } = Astro.props;
-const allNotes = await getCollection("note");
-const notesInFolder = allNotes.filter((n) => n.data.folder === folder);
+const { carpeta } = Astro.props;
+const todasLasNotas = await getCollection("note");
+const notasEnCarpeta = todasLasNotas.filter((n) => n.data.folder === carpeta);
 ---
 
-<Base Title={folder}>
+<Base Title={carpeta}>
     <section class="notes-folder">
         <h2>Todas las notas</h2>
         <div class="list-notes">
             <nav>
                 <ul>
                     {
-                        notesInFolder.map((note) => (
+                        notasEnCarpeta.map((note) => (
                             <li>
                                 <a href={note.slug}>
                                     <i class="fa-solid fa-file" />

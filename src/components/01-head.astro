@@ -1,0 +1,18 @@
+---
+import Favicon from "./head/meta/favicon.astro";
+import TitleAndDescriptionIndex from "./head/head-dinamico.astro";
+import TitleAndDescriptionCustom from "./head/head-index.astro";
+const isIndex = Astro.props;
+---
+
+<head>
+    <!-- Global Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicon -->
+    <Favicon />
+    <!-- Title -->
+    {isIndex ? <TitleAndDescriptionIndex /> : <TitleAndDescriptionCustom />}
+</head>

@@ -21,3 +21,61 @@
     font-family: "Syne Mono";
     src: url("../assets/fonts/SyneMono-Regular.ttf") format("truetype");
 }
+/* RessetCSS */
+html {
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: light-dark(#f9fbfc, #121c22);
+    min-height: 100dvh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: light-dark(#1e2b32, #dfe8ec);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Josefin Sans";
+    }
+    p {
+        font-family: "Lora";
+    }
+    ol,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a {
+        color: light-dark(#1c2b33, #e5eef2);
+        text-decoration: none;
+    }
+    footer {
+        margin-block-start: 2rem;
+        width: 100%;
+        background-color: light-dark(#121c22, #12292b);
+        p,
+        a {
+            color: #e5eef2;
+            font-family: "Josefin Sans";
+            text-wrap: balance;
+        }
+    }
+}
+/** End RessetCSS**/
