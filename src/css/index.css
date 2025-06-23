@@ -1,6 +1,11 @@
 @import url("./main.css");
 @import url("./Index/header/menor360.css");
+@import url("./Index/header/menor720.css");
+@import url("./Index/header/mayor720.css");
+/*Footer Style*/
 @import url("./Index/footer/menor360.css");
+@import url("./Index/footer/menor720.css");
+@import url("./Index/footer/mayor720.css");
 
 /*Notas en index*/
 .headnote {
