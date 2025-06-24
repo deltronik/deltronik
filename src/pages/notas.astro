@@ -20,7 +20,7 @@ const isIndex = true;
         <div class="folder-list">
             {
                 Array.from(grouped.entries()).map(([folder, count]) => (
-                    <a class="link-folder" href={`/note/${folder}`}>
+                    <a class="link-folder" href={`/notas/${folder}`}>
                         <Carpeta
                             imagePath={`/src/content/notas/${folder}/img.png`}
                             title={folder}
