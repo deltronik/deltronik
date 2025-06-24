@@ -1,0 +1,287 @@
+.note {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+    .headnote {
+        width: 95%;
+        margin-inline: auto;
+        margin-block-end: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        h2 {
+            font-size: 1.5rem;
+            font-family: "Jersey";
+            margin: 0;
+        }
+        a {
+            font-family: "Jersey";
+            color: darkorange;
+        }
+    }
+    .itemnote {
+        display: flex;
+        width: 98%;
+        margin-inline: auto;
+        margin-block: 0.3rem;
+        height: 2.4rem;
+        align-items: center;
+        article {
+            width: 95%;
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+            margin-inline: auto;
+            align-items: center;
+            justify-content: space-between;
+            picture {
+                width: 2rem;
+                height: 2rem;
+                img {
+                    width: 2rem;
+                    aspect-ratio: 1/1;
+                }
+            }
+            .titlenote {
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                text-align: start;
+                h3 {
+                    font-size: 1rem;
+                    margin-block: 0.2rem;
+                }
+                h6 {
+                    font-size: 0.6rem;
+                    margin-block: 0.2rem;
+                    font-family: "Inter";
+                }
+            }
+            .arrownote {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+@media (min-width: 360px) and (max-width: 560px) {
+    .note {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        .headnote {
+            width: 92%;
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-block: 1rem;
+            h2 {
+                margin: 0;
+                font-size: 2rem;
+                font-family: "Jersey";
+            }
+            a {
+                font-family: "Jersey";
+                color: darkorange;
+                font-size: 1.2rem;
+            }
+        }
+        .itemnote {
+            display: flex;
+            width: 90%;
+            margin-inline: auto;
+            margin-block: 0.3rem;
+            height: 2.4rem;
+            align-items: center;
+            background-color: #f2f2f205;
+            border-radius: 5px;
+            article {
+                width: 96%;
+                height: 2.2rem;
+                display: flex;
+                flex-direction: row;
+                margin-inline: auto;
+                align-items: center;
+                justify-content: space-between;
+                picture {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    img {
+                        width: 2.2rem;
+                        aspect-ratio: 1/1;
+                    }
+                }
+                .titlenote {
+                    display: flex;
+                    flex-grow: 1;
+                    flex-direction: column;
+                    margin-inline-start: 0.5rem;
+                    text-align: start;
+                    h3 {
+                        font-size: 1.1rem;
+                        margin-block: 0;
+                    }
+                    h6 {
+                        font-size: 0.6rem;
+                        margin-block: 0.1rem;
+                        font-family: "Inter";
+                    }
+                }
+                .arrownote {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 561px) and (max-width: 720px) {
+    .note {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        .headnote {
+            width: 90%;
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-block-end: 1rem;
+            h2 {
+                margin: 0;
+                font-size: 1.8rem;
+                font-family: "Jersey";
+            }
+            a {
+                font-size: 1.2rem;
+                font-family: "Jersey";
+                color: darkorange;
+            }
+        }
+        .itemnote {
+            display: flex;
+            width: 80%;
+            margin-inline: auto;
+            margin-block: 0.3rem;
+            height: 2.5rem;
+            align-items: center;
+            background-color: #f2f2f205;
+            border-radius: 5px;
+            article {
+                width: 90%;
+                height: 2.4rem;
+                display: flex;
+                flex-direction: row;
+                margin-inline: auto;
+                align-items: center;
+                justify-content: space-between;
+                picture {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                    img {
+                        width: 2.2rem;
+                        aspect-ratio: 1/1;
+                    }
+                }
+                .titlenote {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    margin-inline-start: 0.8rem;
+                    text-align: start;
+                    h3 {
+                        font-size: 1.2rem;
+                        margin-block: 0rem;
+                    }
+                    h6 {
+                        font-size: 0.8rem;
+                        margin-block: 0.1rem;
+                        font-family: "Inter";
+                    }
+                }
+                .arrownote {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 721px) {
+    .note {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-block: 2rem;
+        .headnote {
+            width: 80%;
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-block-end: 2rem;
+            h2 {
+                margin: 0;
+                font-size: 2.5rem;
+                font-family: "Jersey";
+            }
+            a {
+                font-size: 1.2rem;
+                font-family: "Jersey";
+                color: darkorange;
+            }
+        }
+        .itemnote {
+            display: flex;
+            width: 80%;
+            margin-inline: auto;
+            margin-block: 0.3rem;
+            height: 3rem;
+            align-items: center;
+            background-color: #f2f2f205;
+            border-radius: 0.4rem;
+            article {
+                width: 98%;
+                height: 3rem;
+                display: flex;
+                flex-direction: row;
+                margin-inline: auto;
+                align-items: center;
+                justify-content: space-between;
+                picture {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    img {
+                        width: 2.5rem;
+                        aspect-ratio: 1/1;
+                    }
+                }
+                .titlenote {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    margin-inline-start: 0.8rem;
+                    text-align: start;
+                    h3 {
+                        font-size: 1.4rem;
+                        margin-block: 0rem;
+                    }
+                    h6 {
+                        font-size: 0.8rem;
+                        margin-block: 0.1rem;
+                        font-family: "Inter";
+                    }
+                }
+                .arrownote {
+                    align-items: center;
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

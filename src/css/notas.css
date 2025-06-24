@@ -1,61 +1,12 @@
+/* Resset and Base Style site*/
 @import url(./main.css);
-
-body {
-    main {
-        h1 {
-            color: light-dark(darkgreen, darkorange);
-            font-size: 2rem;
-        }
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: light-dark(black, white);
-        }
-        hr {
-            color: light-dark(darkgray, dimgray);
-        }
-        strong {
-            color: light-dark(#003e5c, #78d1ff);
-        }
-        a {
-            color: light-dark(#2c82c9, #4ecaff);
-        }
-        a:hover {
-            color: light-dark(#1d6dad, #91e3ff);
-        }
-    }
-}
-@media (max-width: 300px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100dvh;
-        width: 100%;
-        aside {
-            height: 3rem;
-            border-block-end: 1px solid light-dark(#eef0f2, #253945);
-            display: flex;
-            align-items: center;
-        }
-        main {
-            margin-inline: auto;
-            width: 95%;
-            font-family: "Inter", "Lora";
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                text-wrap: balance;
-                font-family: "Josefin Sans";
-            }
-            p,
-            a {
-                text-wrap: prety;
-            }
-        }
-    }
-}
+/* Heade Style */
+@import url("./Index/header/menor360.css");
+@import url("./Index/header/menor720.css");
+@import url("./Index/header/mayor720.css");
+/*Carpetas Style*/
+@import url("./Notas/carpetas.css");
+/*Footer Style*/
+@import url("./Index/footer/menor360.css");
+@import url("./Index/footer/menor720.css");
+@import url("./Index/footer/mayor720.css");

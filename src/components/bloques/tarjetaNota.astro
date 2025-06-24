@@ -1,0 +1,25 @@
+---
+import { ImageMetadata } from "astro";
+
+interface Props {
+    imagePath: string;
+    title: string;
+    noteNumber: number;
+}
+
+const { imagePath, title, noteNumber } = Astro.props;
+const Images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/notas/**/*.{jpeg,jpg,png,gif}",
+);
+---
+
+<article class="folder">
+    <img
+        src={(await Images[imagePath]()).default.src}
+        alt={`Portada imagen de ${title}`}
+        loading="lazy"
+        decoding="async"
+    />
+    <h2>{title}</h2>
+    <p>[ {noteNumber} notas ]</p>
+</article>
