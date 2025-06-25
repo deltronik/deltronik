@@ -1,0 +1,21 @@
+---
+import NavBar from "./../navbar.astro";
+import Banner from "./imgHero.astro";
+import Desc from "./dataHero.astro";
+const { Title, Description } = Astro.props;
+---
+
+<header>
+    <section class="hero-folder">
+        <div class="box-data">
+            <Banner
+                imagePath={`/src/content/notas/${Title}/img.png`}
+                imageAlt={`Portada de ${Title}`}
+            />
+            <div class="text-hero">
+                <h1>{Title}</h1>
+                <Desc Description={Description} />
+            </div>
+        </div>
+    </section>
+</header>

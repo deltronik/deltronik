@@ -1,11 +1,18 @@
 ---
 import NavBar from "./header/navbar.astro";
 import Hero from "./header/hero.astro";
+import FolderHero from "./header/carpeta/header-carpeta.astro";
 
-const { isIndex } = Astro.props;
+const { isIndex, Title, Description } = Astro.props;
 ---
 
 <header>
     <NavBar />
-    {isIndex ? <Hero /> : <h1>Hola</h1>}
+    {
+        isIndex ? (
+            <Hero />
+        ) : (
+            <FolderHero Title={Title} Description={Description} />
+        )
+    }
 </header>
