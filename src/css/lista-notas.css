@@ -3,6 +3,8 @@
 @import url("./Notas/header-list-carpeta/menor360.css");
 @import url("./Notas/header-list-carpeta/menor720.css");
 @import url("./Notas/header-list-carpeta/mayor720.css");
+/*Main List Note*/
+@import url("./Notas/lista-notas.css");
 /*Footer*/
 @import url("./Index/footer/menor360.css");
 @import url("./Index/footer/menor720.css");

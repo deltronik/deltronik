@@ -1,5 +1,6 @@
 ---
 import Base from "./../../layouts/site-carpeta.astro";
+import Text from "./../../components/bloques/textIcon.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -27,10 +28,9 @@ const notasEnCarpeta = todasLasNotas.filter((n) => n.data.folder === carpeta);
                         notasEnCarpeta.map((note) => (
                             <li>
                                 <a href={note.slug}>
-                                    <i class="fa-solid fa-file" />
+                                    <i class="fa-solid fa-file-word" />
                                     {note.data.title}
                                 </a>
-                                <a href={note.slug}>→</a>
                             </li>
                         ))
                     }

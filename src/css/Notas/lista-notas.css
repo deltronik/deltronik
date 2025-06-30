@@ -1,0 +1,140 @@
+.notes-folder {
+    width: 100%;
+    text-align: center;
+    h2 {
+        font-size: 2rem;
+    }
+    .list-notes {
+        width: 90%;
+        text-align: start;
+        margin-inline: auto;
+        nav {
+            ul {
+                li {
+                    width: 100%;
+                    margin-block: 0.3rem;
+                    background-color: #f2f2f205;
+                    height: 2rem;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    a {
+                        widht: 90%;
+                        margin-inline-start: 0.2rem;
+                        i {
+                            margin-inline-start: 0.1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 361px) and (max-width: 560px) {
+    .notes-folder {
+        width: 100%;
+        text-align: center;
+        h2 {
+            font-size: 2rem;
+        }
+        .list-notes {
+            width: 80%;
+            text-align: start;
+            margin-inline: auto;
+            nav {
+                ul {
+                    li {
+                        width: 100%;
+                        margin-block: 0.5rem;
+                        background-color: #f2f2f205;
+                        height: 3rem;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            font-family: "Inter";
+                            font-size: 1.1rem;
+                            widht: 90%;
+                            margin-inline-start: 1rem;
+                            i {
+                                margin-inline-start: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 561px) and (max-width: 720px) {
+    .notes-folder {
+        width: 100%;
+        text-align: center;
+        h2 {
+            font-size: 2.5rem;
+        }
+        .list-notes {
+            width: 80%;
+            text-align: start;
+            margin-inline: auto;
+            nav {
+                ul {
+                    li {
+                        width: 100%;
+                        margin-block: 0.5rem;
+                        background-color: #f2f2f205;
+                        height: 3rem;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            font-family: "Inter";
+                            font-size: 1.1rem;
+                            widht: 90%;
+                            margin-inline-start: 1rem;
+                            i {
+                                margin-inline-start: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 721px) {
+    .notes-folder {
+        width: 100%;
+        text-align: center;
+        h2 {
+            font-size: 2.8rem;
+        }
+        .list-notes {
+            width: 70%;
+            text-align: start;
+            margin-inline: auto;
+            nav {
+                ul {
+                    li {
+                        width: 100%;
+                        margin-block: 0.8rem;
+                        background-color: #f2f2f205;
+                        height: 4rem;
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            font-family: "Inter";
+                            font-size: 1.4rem;
+                            widht: 90%;
+                            margin-inline-start: 1rem;
+                            i {
+                                margin-inline-end: 0.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
