@@ -1,0 +1,45 @@
+---
+import Creative from "../components/footer/creative.astro";
+import Meta from "./../components/01-head.astro";
+import "./../css/nota.css";
+
+const { Title, Description, Img, ImgAlt, Path } = Astro.props;
+const isIndex = false;
+---
+
+<!doctype html>
+<html lang="es">
+    <Meta
+        isIndex={isIndex}
+        Title={Title}
+        Description={Description}
+        Img={Img}
+        Path={Path}
+    />
+    <body>
+        <input type="checkbox" id="aside-toggle" hidden />
+        <aside class="sidebar">
+            <h2>DelTronik</h2>
+        </aside>
+        <label
+            for="aside-toggle"
+            class="toggle-button"
+            aria-label="Mostrar u ocultar menu de notas">☰</label
+        >
+        <div class="note-boy">
+            <main>
+                <article>
+                    <header>
+                        <h1>{Title}</h1>
+                    </header>
+                    <section>
+                        <slot />
+                    </section>
+                </article>
+            </main>
+            <footer>
+                <Creative />
+            </footer>
+        </div>
+    </body>
+</html>

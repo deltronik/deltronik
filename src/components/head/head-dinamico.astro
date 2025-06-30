@@ -1,0 +1,15 @@
+---
+import Og from "./meta/opengraph-index.astro";
+import Ogd from "./meta/opengraph-dinamic.astro";
+const { isIndex, Title, Description, Img, Path } = Astro.props;
+---
+
+{
+    isIndex ? (
+        <Og />
+    ) : (
+        <Ogd Title={Title} Description={Description} Img={Img} Path={Path} />
+    )
+}
+<title>DelTronik | {Title}</title>
+<meta name="description" content={Description} />

@@ -1,0 +1,185 @@
+.all-notes {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+    margin-inline: auto;
+    text-align: center;
+    width: 95%;
+    h1 {
+        font-size: 1.5rem;
+        font-family: "Jersey";
+    }
+    .folder-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .folder {
+            margin-inline: auto;
+            margin-block: 0.4rem;
+            width: 90%;
+            img {
+                width: 100%;
+                aspect-ratio: 1/1;
+                margin: 0;
+                border-radius: 8px;
+            }
+            h2 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.8rem;
+                color: darkorange;
+                margin: 0;
+            }
+        }
+    }
+}
+@media (min-width: 360px) and (max-width: 560px) {
+    .all-notes {
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        width: 90%;
+        h1 {
+            font-size: 2rem;
+            font-family: "Josefin Sans";
+        }
+        .folder-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .folder {
+                margin-inline: auto;
+                margin-block: 0.4rem;
+                width: 80%;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    margin: 0;
+                    border-radius: 8px;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+                h2::first-letter {
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: 0.8rem;
+                    color: darkorange;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 561px) and (max-width: 720px) {
+    .all-notes {
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        width: 90%;
+        h1 {
+            font-size: 2rem;
+            font-family: "Josefin Sans";
+        }
+        .folder-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            .folder {
+                margin-inline: 0.5rem;
+                margin-block: 1rem;
+                width: 14rem;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    margin: 0;
+                    border-radius: 8px;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+                h2::first-letter {
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: 0.8rem;
+                    color: darkorange;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 721px) {
+    .all-notes {
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        margin-inline: auto;
+        text-align: center;
+        width: 90%;
+        h1 {
+            font-size: 2rem;
+            font-family: "Josefin Sans";
+        }
+        .folder-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            .folder {
+                margin-inline: 0.5rem;
+                margin-block: 1rem;
+                width: 14rem;
+                overflow: hidden;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    margin: 0;
+                    border-radius: 8px;
+                }
+                h2 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                }
+                h2::first-letter {
+                    text-transform: uppercase;
+                }
+                p {
+                    font-size: 0.8rem;
+                    color: darkorange;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

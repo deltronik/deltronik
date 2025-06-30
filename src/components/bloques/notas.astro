@@ -16,7 +16,7 @@ const notaPublicada = todasLasNotas
     </div>
     {
         notaPublicada.map((notas) => (
-            <a href={`/notas/${notas.slug}`}>
+            <a class="itemnote" href={`/notas/${notas.slug}`}>
                 <article>
                     <picture>
                         <img
@@ -24,11 +24,11 @@ const notaPublicada = todasLasNotas
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg"
                         />
                     </picture>
-                    <div class="title-note">
+                    <div class="titlenote">
                         <h3>{notas.data.title}</h3>
                         <h6>{notas.data.folder}</h6>
                     </div>
-                    <div class="arrow-note">
+                    <div class="arrownote">
                         <span>→</span>
                     </div>
                 </article>

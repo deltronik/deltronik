@@ -44,25 +44,34 @@
             }
         }
     }
-    .hero {
-        background-image: url("./../../../assets/img/banner.png");
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        height: 80dvh;
-        width: 100%;
+    .hero-folder {
         margin-inline: auto;
-        align-items: end;
-        .paragraph {
-            width: 98%;
-            text-align: center;
-            p {
-                text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-                color: #f9fbfc;
-                font-size: 2.8rem;
-                font-weight: 400;
-                font-family: "Syne Mono";
+        margin-block-end: 2rem;
+        width: 90%;
+        .box-data {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            margin-block-start: 1rem;
+            img {
+                border-radius: 15px;
+                width: 45%;
+                height: initial;
+            }
+            .text-hero {
+                width: 48%;
+                margin-inline: auto;
+                text-align: center;
+                h1 {
+                    font-family: "Josefin Sans";
+                    font-size: 4rem;
+                    margin-block-end: 1rem;
+                }
+                p {
+                    font-family: "Josefin Sans";
+                    font-size: 1.2rem;
+                    margin-block-start: 0.1rem;
+                }
             }
         }
     }

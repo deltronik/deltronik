@@ -1,0 +1,196 @@
+@media (min-width: 361px) and (max-width: 560px) {
+    header {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .header-bar {
+            width: 100%;
+            height: 3.2rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid light-dark(#eef0f2, #253945);
+            align-items: center;
+            .site-name {
+                margin-inline-start: 1rem;
+            }
+            .box-nav {
+                margin-inline-end: 1rem;
+                display: flex;
+                font-family: "Josefin Sans";
+                justify-content: space-between;
+                .hamburger {
+                    color: light-dark(black, #eef0f2);
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+                #navbar:checked + .hamburger + .list-link {
+                    display: flex;
+                }
+                nav {
+                    align-items: center;
+                    background-color: light-dark(black, #121c22);
+                    display: none;
+                    gap: 1rem;
+                    margin-block-start: 2.3rem;
+                    position: absolute;
+                    right: 0;
+                    width: 100%;
+                    ul {
+                        align-items: center;
+                        text-align: end;
+                        display: inline;
+                        width: 100%;
+                        li {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            margin-block: 0.2rem;
+                            a {
+                                color: light-dark(black, #ffffff);
+                                font-size: 1.2rem;
+                                padding-inline-end: 1rem;
+                                margin-block: 0.2rem;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                picture {
+                    display: none;
+                    height: 100%;
+                    img {
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .hero-folder {
+        margin-inline: auto;
+        width: 100%;
+        .box-data {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+            }
+            .text-hero {
+                width: 90%;
+                margin-inline: auto;
+                text-align: center;
+                h1 {
+                    font-family: "Josefin Sans";
+                    font-size: 2rem;
+                    margin-block-end: 1.2rem;
+                }
+                p {
+                    font-family: "Josefin Sans";
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 561px) and (max-width: 720px) {
+    header {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .header-bar {
+            width: 100%;
+            height: 3.2rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid light-dark(#eef0f2, #253945);
+            align-items: center;
+            .site-name {
+                margin-inline-start: 1rem;
+            }
+            .box-nav {
+                margin-inline-end: 1rem;
+                display: flex;
+                font-family: "Josefin Sans";
+                justify-content: space-between;
+                .hamburger {
+                    color: light-dark(black, #eef0f2);
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+                #navbar:checked + .hamburger + .list-link {
+                    display: flex;
+                }
+                nav {
+                    align-items: center;
+                    background-color: light-dark(black, #121c22);
+                    display: none;
+                    gap: 1rem;
+                    margin-block-start: 2.3rem;
+                    position: absolute;
+                    right: 0;
+                    width: 100%;
+                    ul {
+                        align-items: center;
+                        text-align: end;
+                        display: inline;
+                        width: 100%;
+                        li {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            margin-block: 0.2rem;
+                            a {
+                                color: light-dark(black, #ffffff);
+                                font-size: 1.2rem;
+                                padding-inline-end: 1rem;
+                                margin-block: 0.2rem;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                picture {
+                    display: none;
+                    height: 100%;
+                    img {
+                        height: 2rem;
+                        width: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .hero-folder {
+        margin-inline: auto;
+        width: 98%;
+        .box-data {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            margin-block-start: 1rem;
+            img {
+                border-radius: 15px;
+                width: 48%;
+                height: max-content;
+            }
+            .text-hero {
+                width: 48%;
+                margin-inline: auto;
+                text-align: center;
+                h1 {
+                    font-family: "Josefin Sans";
+                    font-size: 1.8rem;
+                    margin-block: 0;
+                }
+                p {
+                    font-family: "Josefin Sans";
+                    font-size: 1rem;
+                    margin-block-start: 0.1rem;
+                }
+            }
+        }
+    }
+}

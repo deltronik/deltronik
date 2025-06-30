@@ -1,8 +1,8 @@
 ---
 import Favicon from "./head/meta/favicon.astro";
-import TitleAndDescriptionIndex from "./head/head-dinamico.astro";
-import TitleAndDescriptionCustom from "./head/head-index.astro";
-const isIndex = Astro.props;
+import TitleAndDescriptionIndex from "./head/head-index.astro";
+import TitleAndDescriptionCustom from "./head/head-dinamico.astro";
+const { isIndex, Title, Description, Img, Path } = Astro.props;
 ---
 
 <head>
@@ -14,5 +14,17 @@ const isIndex = Astro.props;
     <!-- Favicon -->
     <Favicon />
     <!-- Title -->
-    {isIndex ? <TitleAndDescriptionIndex /> : <TitleAndDescriptionCustom />}
+    {
+        isIndex ? (
+            <TitleAndDescriptionIndex />
+        ) : (
+            <TitleAndDescriptionCustom
+                isIndex={isIndex}
+                Title={Title}
+                Description={Description}
+                Img={Img}
+                Path={Path}
+            />
+        )
+    }
 </head>

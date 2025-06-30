@@ -1,0 +1,22 @@
+---
+import { ImageMetadata } from "astro";
+
+interface Props {
+    imagePath: string;
+    imageAlt: string;
+}
+
+const { imagePath, imageAlt } = Astro.props;
+
+const Images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/notas/**/*.{jpeg,jpg,png,gif}",
+);
+const globPath = `/src/content/notas/${imagePath}`;
+const importGlob = Images[globPath];
+let imgPath = "";
+if (importGlob) {
+    imgPath = (await importGlob()).default.src;
+}
+---
+
+<img src={imagePath} alt={imageAlt} loading="lazy" decoding="async" />

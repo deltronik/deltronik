@@ -1,11 +1,11 @@
-/* Resset CSS and base style*/
-@import url("./main.css");
-/*Header Style*/
+/* Resset and Base Style site*/
+@import url(./main.css);
+/* Heade Style */
 @import url("./Index/header/menor360.css");
 @import url("./Index/header/menor720.css");
 @import url("./Index/header/mayor720.css");
-/*Note Section Style*/
-@import url("./Index/note-sectio.css");
+/*Carpetas Style*/
+@import url("./Notas/lista-carpetas.css");
 /*Footer Style*/
 @import url("./Index/footer/menor360.css");
 @import url("./Index/footer/menor720.css");

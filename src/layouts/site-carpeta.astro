@@ -1,0 +1,50 @@
+---
+import type { ImageMetadata } from "astro";
+import "./../css/lista-notas.css";
+import Base from "./site-base.astro";
+
+const { Title, imagePath, Path } = Astro.props;
+const isIndex = false;
+interface Props {
+    Title: string;
+    imagePath?: string;
+    Path: string;
+}
+
+const Images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/notas/**/*.{jpeg,jpg,png,gif}",
+);
+const globPath = `/src/content/notas/${imagePath}`;
+const importGlob = Images[globPath];
+
+let imgPath = "";
+if (imagePath) {
+    const globPath = `/src/content/notas/${imagePath}`;
+    const importGlob = Images[globPath];
+    if (importGlob) {
+        imgPath = (await importGlob()).default.src;
+    }
+}
+
+const descriptions = import.meta.glob("/src/content/notas/**/desc.txt", {
+    query: "?raw",
+    import: "default",
+});
+
+const path = `/src/content/notas/${Title}/desc.txt`;
+let descriptionText = "Descripción no disponible.";
+
+if (descriptions[path]) {
+    descriptionText = (await descriptions[path]()) as string;
+}
+---
+
+<Base
+    isIndex={isIndex}
+    Title={Title}
+    Description={descriptionText}
+    Img={imgPath}
+    Path={Path}
+>
+    <slot />
+</Base>

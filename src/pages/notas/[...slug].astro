@@ -1,28 +1,28 @@
 ---
+import Base from "./../../layouts/site-note.astro";
 import { getEntry } from "astro:content";
 import { getCollection, render } from "astro:content";
-import Base from "../../layouts/Notes.astro";
 
 export async function getStaticPaths() {
-    const notes = await getCollection("note");
-    return notes.map((note) => ({
-        params: { slug: note.slug },
-        props: { slug: note.slug },
+    const notas = await getCollection("notas");
+    return notas.map((notas) => ({
+        params: { slug: notas.slug },
+        props: { slug: notas.slug },
     }));
 }
 const { slug } = Astro.props;
-const note = await getEntry("note", slug);
-if (!note) throw new Error(`Nota no encontrada: ${slug}`);
-const { Content } = await render(note);
-console.log(note.data.image);
+const nota = await getEntry("notas", slug);
+if (!nota) throw new Error(`Nota no encontrada: ${slug}`);
+const { Content } = await render(nota);
+console.log(nota.data.image);
 ---
 
 <Base
-    Title={note.data.title}
-    Description={note.data.description}
-    Img={note.data.image}
-    ImgAlt={note.data.imageAlt}
-    Path={`/note/${note.slug}`}
+    Title={nota.data.title}
+    Description={nota.data.description}
+    Img={nota.data.image}
+    ImgAlt={nota.data.imageAlt}
+    Path={`/notas/${nota.slug}`}
 >
     <section>
         <Content />
