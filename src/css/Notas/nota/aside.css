@@ -1,21 +1,41 @@
 #aside-toggle ~ .sidebar {
-    transform: translateX(+120%);
+    transform: translateX(46dvw);
     transition: transform 0.3s ease;
 }
 #aside-toggle:checked ~ .sidebar {
-    transform: translateX(30%);
+    transform: translateX(100dvw);
 }
 .sidebar {
+    padding-inline: 2dvw;
     position: fixed;
     top: 0;
     left: 0;
-    width: 75%;
-    max-width: 300px;
+    width: 50dvw;
     height: 100%;
-    background: white;
+    background: #121c22;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    figure {
+        width: 100%;
+        margin-block-end: 0;
+        img {
+            width: 80%;
+            aspect-ratio: 1/1;
+            margin-inline: 10%;
+        }
+    }
+    .author-name {
+        margin: 0;
+        margin-block-end: 2rem;
+    }
+
+    nav {
+        width: 100%;
+    }
 }
 
 /* Botón flotante */
@@ -29,46 +49,123 @@
     align-items: center;
     justify-content: center;
     padding-block-start: 0.2rem;
-    background: #f2f2f2bb;
+    background-color: #f2f2f2bb;
     color: #121c22;
     border-radius: 5px;
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1100;
 }
-main {
-    width: 92%;
-    margin-inline: auto;
-}
 @media (min-width: 360px) and (max-width: 520px) {
-    main {
-        width: 90%;
-        margin-inline: auto;
-    }
     #aside-toggle ~ .sidebar {
-        transform: translateX(+200%);
+        transform: translateX(56dvw);
         transition: transform 0.3s ease;
     }
     #aside-toggle:checked ~ .sidebar {
-        transform: translateX(60%);
+        transform: translateX(100dvw);
     }
     .sidebar {
+        padding-inline: 2dvw;
         position: fixed;
         top: 0;
         left: 0;
-        width: 70%;
-        max-width: 300px;
+        width: 40dvw;
         height: 100%;
-        background: #121c22bb;
+        background: #121c22;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-        padding: 1rem;
         z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figure {
+            width: 100%;
+            margin-block-end: 2px;
+            img {
+                width: 80%;
+                aspect-ratio: 1/1;
+                margin-inline: 10%;
+            }
+        }
+        .author-name {
+            margin: 0;
+            margin-block-end: 2rem;
+        }
+
+        nav {
+            width: 100%;
+            ul {
+                li {
+                    margin-block: 0.3rem;
+                }
+            }
+        }
     }
 
     /* Botón flotante */
     .toggle-button {
-        width: 3rem;
-        height: 3rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block-start: 0rem;
+        background-color: #f2f2f2bb;
+        color: #121c22;
+        border-radius: 5px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 1100;
+    }
+}
+@media (min-width: 521px) and (max-width: 720px) {
+    #aside-toggle ~ .sidebar {
+        transform: translateX(66dvw);
+        transition: transform 0.3s ease;
+    }
+    #aside-toggle:checked ~ .sidebar {
+        transform: translateX(100dvw);
+    }
+    .sidebar {
+        padding-inline: 2dvw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30dvw;
+        height: 100%;
+        background: #121c22;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figure {
+            width: 100%;
+            margin-block-end: 0;
+            img {
+                width: 80%;
+                aspect-ratio: 1/1;
+                margin-inline: 10%;
+            }
+        }
+        .author-name {
+            margin: 0;
+            margin-block-end: 2rem;
+        }
+
+        nav {
+            width: 100%;
+        }
+    }
+
+    /* Botón flotante */
+    .toggle-button {
+        width: 2rem;
+        height: 2rem;
         position: fixed;
         bottom: 1rem;
         right: 1rem;
@@ -76,15 +173,21 @@ main {
         align-items: center;
         justify-content: center;
         padding-block-start: 0.2rem;
-        background: #f2f2f2dd;
+        background-color: #f2f2f2bb;
         color: #121c22;
         border-radius: 5px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         cursor: pointer;
         z-index: 1100;
     }
 }
-@media (min-width: 521px) and (max-width: 720px) {
-}
 @media (min-width: 720px) {
+    #aside-toggle,
+    .toggle-button {
+        display: none;
+    }
+    .aside {
+        position: relative;
+        display: flex;
+    }
 }

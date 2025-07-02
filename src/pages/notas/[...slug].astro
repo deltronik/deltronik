@@ -14,7 +14,7 @@ const { slug } = Astro.props;
 const nota = await getEntry("notas", slug);
 if (!nota) throw new Error(`Nota no encontrada: ${slug}`);
 const { Content } = await render(nota);
-console.log(nota.data.image);
+console.log(nota.data.author);
 ---
 
 <Base
@@ -23,6 +23,7 @@ console.log(nota.data.image);
     Img={nota.data.image}
     ImgAlt={nota.data.imageAlt}
     Path={`/notas/${nota.slug}`}
+    Author={nota.data.author}
 >
     <section>
         <Content />

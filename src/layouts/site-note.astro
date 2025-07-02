@@ -1,9 +1,11 @@
 ---
+import crypto from "node:crypto";
 import Creative from "../components/footer/creative.astro";
 import Meta from "./../components/01-head.astro";
+import Avatar from "./../components/bloques/gravatar.astro";
 import "./../css/nota.css";
 
-const { Title, Description, Img, ImgAlt, Path } = Astro.props;
+const { Title, Description, Img, ImgAlt, Path, Author } = Astro.props;
 const isIndex = false;
 ---
 
@@ -19,7 +21,7 @@ const isIndex = false;
     <body>
         <input type="checkbox" id="aside-toggle" hidden />
         <aside class="sidebar">
-            <h2>DelTronik</h2>
+            <Avatar />
         </aside>
         <label
             for="aside-toggle"
