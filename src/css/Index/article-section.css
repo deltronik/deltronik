@@ -1,0 +1,50 @@
+.blogposts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-block-start: 2rem;
+    .title-article {
+        width: 95%;
+        margin-inline: auto;
+        margin-block-end: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        h2 {
+            font-size: 1.5rem;
+            font-family: "Jersey";
+        }
+        a {
+            color: darkorange;
+            font-family: "Jersey";
+        }
+    }
+    .listcard {
+        width: 80%;
+        margin-inline: auto;
+        .cards {
+            width: 100%;
+            margin-block-end: 2rem;
+            text-align: center;
+            picture {
+                width: 100%;
+                aspect-ratio: 1/1;
+                margin-block: 0;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 8px;
+                    margin-block: 0;
+                }
+                a {
+                    width: 100%;
+                    margin-inline: auto;
+                    h3 {
+                        width: 100%;
+                        background-color: red;
+                    }
+                }
+            }
+        }
+    }
+}
