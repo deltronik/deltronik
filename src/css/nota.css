@@ -12,4 +12,31 @@ main {
 @media (min-width: 521px) and (max-width: 720px) {
 }
 @media (min-width: 720px) {
+    .box-note {
+        width: 100dvw;
+        max-width: 100dvw;
+        display: flex;
+        flex-direction: row;
+        .note-body {
+            width: calc(100% - 14rem);
+            margin-inline-start: auto;
+            padding: 0;
+            main {
+                background-color: #000000;
+                border-radius: 15px;
+                margin-block-start: 1rem;
+                padding-inline: 1rem;
+                padding-block: 1.5rem;
+                width: 80%;
+            }
+            .foo-note {
+                padding-block: 0.7rem;
+                background-color: #121c22;
+                text-align: end;
+                p {
+                    margin: 0 1rem 0 0;
+                }
+            }
+        }
+    }
 }

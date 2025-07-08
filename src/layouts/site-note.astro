@@ -18,17 +18,19 @@ const isIndex = false;
         Img={Img}
         Path={Path}
     />
-    <body>
+    <body class="box-note">
         <input type="checkbox" id="aside-toggle" hidden />
         <aside class="sidebar">
-            <Avatar />
+            <div class="nav-desk">
+                <Avatar />
+            </div>
         </aside>
         <label
             for="aside-toggle"
             class="toggle-button"
             aria-label="Mostrar u ocultar menu de notas">☰</label
         >
-        <div class="note-boy">
+        <div class="note-body">
             <main>
                 <article>
                     <header>
@@ -39,7 +41,7 @@ const isIndex = false;
                     </section>
                 </article>
             </main>
-            <footer>
+            <footer class="foo-note">
                 <Creative />
             </footer>
         </div>
