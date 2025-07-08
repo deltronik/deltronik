@@ -19,6 +19,13 @@
     flex-direction: column;
     align-items: center;
 
+    .nav-desk {
+        display: inherit;
+        position: inherit;
+        flex-direction: inherit;
+        align-items: center;
+    }
+
     figure {
         width: 100%;
         margin-block-end: 0;
@@ -182,12 +189,60 @@
     }
 }
 @media (min-width: 720px) {
-    #aside-toggle,
-    .toggle-button {
+    #aside-toggle ~ .sidebar {
+        transform: translateX(0);
+        transition: none;
+    }
+    #aside-toggle:checked ~ .sidebar {
+        transform: translateX(0dvw);
+    }
+    #aside-toggle {
         display: none;
     }
-    .aside {
-        position: relative;
+    .sidebar {
+        padding-inline: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 14rem;
+        max-height: 100dvh;
+        background: #121c22;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-desk {
+            position: fixed;
+            width: 14rem;
+            height: 100dvw;
+        }
+
+        figure {
+            display: flex;
+            width: 100%;
+            margin-block-end: 0.5rem;
+            img {
+                width: 8rem;
+                aspect-ratio: 1/1;
+                margin-inline: auto;
+            }
+        }
+        .author-name {
+            font-size: 2rem;
+            margin: 0;
+            margin-block-end: 2rem;
+        }
+
+        nav {
+            margin-inline-start: 1rem;
+            width: 100%;
+        }
+    }
+
+    /* Botón flotante */
+    .toggle-button {
+        display: none;
     }
 }
