@@ -8,37 +8,3 @@ const { srcImg, altImg, title, src } = Astro.props;
     </picture>
     <a href={src}><h3>{title}</h3></a>
 </div>
-<style>
-    /** MovilStyle**/
-    @media (max-width: 620px) {
-    }
-    /**DesktopStyle**/
-    @media (min-width: 621px) {
-        .cards {
-            width: 20%;
-            height: 100%;
-            display: inline;
-            picture {
-                width: 100%;
-                height: 90%;
-                margin: 0;
-                padding: 0;
-                img {
-                    width: inherit;
-                    height: 100%;
-                    margin: inherit;
-                }
-            }
-            a {
-                width: 100%;
-                height: 10%;
-                padding: 0;
-                margin: 0;
-                h3 {
-                    margin: 0;
-                }
-            }
-        }
-    }
-    /**/
-</style>
